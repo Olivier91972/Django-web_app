@@ -29,7 +29,7 @@
                 <img class="" width="200" height="300"
                      src="{% static 'images/media/' %}{{ ticket.image }}" alt="{{ ticket.title }}"/>
             {% endif %}
-            {% include 'app/partials/update_delete_buttons.html' with content_id=ticket.id content_url='update_ticket' %}
+            {% include 'app1/partials/update_delete_buttons.html' with content_id=ticket.id content_url='update_ticket' %}
         </div>
         {% if request.get_full_path == "/flux/" %}
             <a class="text-decoration-none float-end btn btn-sm btn-outline-success" href="{% url 'create_review' ticket.id %}">Créer une critique</a>

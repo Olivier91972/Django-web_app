@@ -90,7 +90,7 @@ def create_ticket_and_review_view(request):
 
     context = {"ticket_form": ticket_form, "review_form": review_form}
 
-    return render(request, "app/create_ticket_review.html", context=context)
+    return render(request, "app1/create_ticket_review.html", context=context)
 
 
 @login_required
@@ -106,7 +106,7 @@ def create_ticket_view(request):
             messages.success(request, "Votre ticket est créé.")
             return redirect("posts")
     context = {"form": form}
-    return render(request, "app/create_ticket.html", context=context)
+    return render(request, "app1/create_ticket.html", context=context)
 
 
 @login_required
@@ -118,7 +118,7 @@ def follow_users_view(request):
         user = User.objects.get(username=request.POST["following"])
 
         if str(request.user) == request.POST["following"]:
-            messages.error(request, "Vous ne pouvez pas suivre vous même")
+            messages.error(request, "Vous ne pouvez pas vous suivre vous même")
             return redirect("follow")
 
         try:
@@ -135,7 +135,7 @@ def follow_users_view(request):
         return redirect("follow")
 
     context = {"following": following_users, "followers": users_followers}
-    return render(request, "app/follow.html", context=context)
+    return render(request, "app1/follow.html", context=context)
 
 
 @login_required
@@ -155,7 +155,7 @@ def posts_view(request):
 
     tickets_and_reviews = sorted(chain(tickets, reviews), key=lambda obj: obj.time_created, reverse=True)
 
-    return render(request, "app/posts.html", context={"tickets_and_reviews": tickets_and_reviews})
+    return render(request, "app1/posts.html", context={"tickets_and_reviews": tickets_and_reviews})
 
 
 @login_required
@@ -173,7 +173,7 @@ def update_ticket(request, id):
 
     context["ticket"] = ticket
 
-    return render(request, "app/update_ticket.html", context=context)
+    return render(request, "app1/update_ticket.html", context=context)
 
 
 @login_required
@@ -191,7 +191,7 @@ def update_review(request, review_id):
 
     context["review"] = review
 
-    return render(request, "app/update_review.html", context=context)
+    return render(request, "app1/update_review.html", context=context)
 
 
 @login_required
@@ -199,7 +199,7 @@ def create_review(request, ticket_id):
     """ Create a review of a ticket """
     ticket = get_object_or_404(Ticket, id=ticket_id)
     if ticket.has_review:
-        messages.error(request, "Ce ticket à déjà une critique.")
+        messages.error(request, "Ce ticket a déjà une critique.")
         return redirect("posts")
     form = ReviewForm()
     if request.method == "POST":
@@ -216,7 +216,7 @@ def create_review(request, ticket_id):
 
     context = {"ticket": ticket, "form": form}
 
-    return render(request, "app/create_review.html", context=context)
+    return render(request, "app1/create_review.html", context=context)
 
 
 @login_required

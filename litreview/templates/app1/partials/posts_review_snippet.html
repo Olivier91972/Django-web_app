@@ -22,5 +22,5 @@
                  src="{% static 'images/media/' %}{{ review.ticket.image }}" alt="{{ ticket.title }}"/>
         {% endif %}
     </div>
-    {% include 'app/partials/update_delete_buttons.html' with content_id=review.id content_url='update_review' %}
+    {% include 'app1/partials/update_delete_buttons.html' with content_id=review.id content_url='update_review' %}
 </div>
