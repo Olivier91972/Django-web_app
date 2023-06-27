@@ -30,7 +30,7 @@ Une application permettant à une communauté d'utilisateurs de consulter ou de 
 - `git --version` : pour vérifier votre version de git si elle est installée ou vous pouvez la télécharger sur https://git-scm.com/downloads
  1. Cloner le dépôt sur le terminal ou l'invite de commande : `git clone https://github.com/Olivier91972/Django-web_app`
  2. Créer un environnement virtuel avec "venv"
-- `cd LITReview` : pour accéder au dossier
+- `cd Django-web_app` : pour accéder au dossier
 - python -m venv ***nom de l'environnement*** : pour créer l'environnement virtuel - exemple : `python -m venv env`
 3. Activez l'environnement virtuel :
 pour unix ou macos :
