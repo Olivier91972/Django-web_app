@@ -11,13 +11,13 @@
             {% if content %}
                 {% for instance in content %}
                     {% if instance|model_type == 'Ticket' %}
-                        {% include 'app/partials/posts_ticket_snippet.html' with ticket=instance %}
+                        {% include 'app1/partials/posts_ticket_snippet.html' with ticket=instance %}
                     {% else %}
-                        {% include 'app/partials/posts_review_snippet.html' with review=instance %}
+                        {% include 'app1/partials/posts_review_snippet.html' with review=instance %}
                     {% endif %}
                 {% endfor %}
             {% else %}
-                <p class="text-center fs-3 text-muted">Votre flux est vide, veuillez créer un ticket ou abonées quel q'un</p>
+                <p class="text-center fs-3 text-muted">Votre flux est vide, veuillez svp créer un ticket ou abonnés</p>
             {% endif %}
         </div>
     </div>

@@ -1,6 +1,6 @@
 {% load static %}
 {% load myfilters %}
-{% include 'partials/modal.html' with content_name=review.headline|del_modal_review_name content_id=review.id content_url='delete_review' extra='supprimer' %}
+{% include 'web/modal.html' with content_name=review.headline|del_modal_review_name content_id=review.id content_url='delete_review' extra='supprimer' %}
 
 <div class=" border p-4 mt-4">
     {% if request.user == review.user %}

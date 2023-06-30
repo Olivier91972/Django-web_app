@@ -47,7 +47,7 @@ def signup_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Votre compte est créé.")
-            return redirect(settings.LOGIN_URL)
+            return redirect("login")
     return render(request, "app1/signup.html", context={"form": form})
 
 
@@ -85,7 +85,7 @@ def create_ticket_and_review_view(request):
             review.ticket.has_review = True
             review.user = request.user
             review.save()
-            messages.success(request, "Le ticket et le critique sont créés.")
+            messages.success(request, "Le ticket et la critique ont été créés.")
             return redirect("posts")
 
     context = {"ticket_form": ticket_form, "review_form": review_form}

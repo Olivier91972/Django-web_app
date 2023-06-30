@@ -1,7 +1,7 @@
 {% load static %}
 {% load myfilters %}
 
-{% include 'partials/modal.html' with content_name=ticket.title|del_modal_ticket_name content_id=ticket.id content_url='delete_ticket' extra='supprimer' %}
+{% include 'web/modal.html' with content_name=ticket.title|del_modal_ticket_name content_id=ticket.id content_url='delete_ticket' extra='supprimer' %}
 
 <div class="d-flex flex-column">
     <div class="border p-4 my-4">
