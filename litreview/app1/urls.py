@@ -1,10 +1,10 @@
 from django.urls import path
-from app1 import views
-from django.contrib import admin
+# from app1 import views
+# from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LogoutView
-from django.urls import path, include
+# from django.urls import path, include
 from app1.views import signup_view, login_view, flux, create_ticket_view, create_ticket_and_review_view, follow_users_view, \
     remove_following_user_view, posts_view, update_ticket, update_review, create_review, delete_ticket, delete_review
 

@@ -3,6 +3,8 @@ from django.conf import settings
 from django.db import models
 
 # Create your models here.
+
+
 class Ticket(models.Model):
     # Your Ticket model definition goes here
     title = models.CharField(max_length=128, verbose_name="Titre")
