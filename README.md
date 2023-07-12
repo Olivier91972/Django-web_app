@@ -14,7 +14,7 @@ Une application permettant à une communauté d'utilisateurs de consulter ou de 
 - Ils peuvent poster leur ticket demandant une critique pour un livre ou un article de littérature
 - Les utilisateurs qui les suivent peuvent ensuite déposer leurs avis en réponse au ticket.
 - Les utilisateurs doivent également pouvoir publier des critiques de livres et d'articles qui n'ont pas encore de ticket.
-4. Postes - page d'affichage des publications :
+4. Posts - page d'affichage des publications :
 - L'utilisateur peut voir ses propres tickets et avis séparément
 - L'utilisateur peut modifier et supprimer ses propres tickets et avis
 5. Abonnements - Page d'affichage des abonnés :
